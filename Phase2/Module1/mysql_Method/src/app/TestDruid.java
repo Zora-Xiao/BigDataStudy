@@ -17,11 +17,11 @@ public class TestDruid {
         try {
             statement = con.createStatement();
              //3.执行查询
-           resultSet = statement.executeQuery("select ename from employee where salary between 3000 and 5000");
+           resultSet = statement.executeQuery("select name from employee where salary between 3000 and 5000");
 
         //4.处理结果集
         while(resultSet.next()){
-            String ename = resultSet.getString("ename");
+            String ename = resultSet.getString("name");
             System.out.println(ename);
         }
 

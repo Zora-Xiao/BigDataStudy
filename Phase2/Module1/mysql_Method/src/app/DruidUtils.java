@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 import javax.sql.DataSource;
-
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
 public class DruidUtils {
@@ -16,11 +15,10 @@ public class DruidUtils {
     static {
         try {
             Properties p = new Properties();
-            InputStream inputStream = DruidUtils.class.getClassLoader().getResourceAsStream("druid.properties");
+            InputStream inputStream = DruidUtils.class.getResourceAsStream("druid.properties");
             p.load(inputStream);
             dataSource = DruidDataSourceFactory.createDataSource(p);
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         }
     }
@@ -48,7 +46,6 @@ public class DruidUtils {
             try {
                 statement.close();
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -56,7 +53,6 @@ public class DruidUtils {
             try {
                 con.close();
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -69,7 +65,6 @@ public class DruidUtils {
             try {
                 resultSet.close();
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
