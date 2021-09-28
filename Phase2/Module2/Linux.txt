@@ -1,0 +1,28 @@
+一、选择题
+1、A
+2、D
+3、B
+4、B
+
+二、操作练习
+1）查询操作
+1、find mytest.log
+2、find /home -name hello.txt
+3、tar -zcvf student.tar.gz /home
+
+2）Shell 编码练习
+#!/bin/bash
+echo 'Select "boy" or "Girl"'
+read sex
+case $sex in
+         G) echo 'She is a girl;'
+        ;;
+         g) echo 'She is a girl;'
+        ;;
+         B) echo 'He is a boy;'
+        ;;
+         b) echo 'He is a boy;'
+        ;;
+         *) echo 'I don'\''t know;'
+        ;;
+esac
